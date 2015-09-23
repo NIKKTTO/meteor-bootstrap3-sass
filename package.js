@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'reywood:bootstrap3-sass',
 	summary: 'Bootstrap 3 with Sass support',
-	version: '3.3.5_1',
+	version: '3.3.6',
 	git: 'https://github.com/englue/meteor-bootstrap3-sass.git'
 });
 
@@ -14,7 +14,7 @@ Package.onUse(function (api) {
 		'assets/javascripts/bootstrap.js'
 	], 'client');
 
-	api.addFiles([
+	api.addAssets([
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.ttf',
@@ -22,7 +22,7 @@ Package.onUse(function (api) {
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.woff2'
 	], 'client');
 
-	api.addFiles([
+	api.addAssets([
 		'_bootstrap.scss',
 		'assets/stylesheets/bootstrap/_alerts.scss',
 		'assets/stylesheets/bootstrap/_badges.scss',
