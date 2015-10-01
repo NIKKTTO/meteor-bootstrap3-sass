@@ -6,9 +6,11 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom('METEOR@1.0');
 
-	api.use('jquery');
+	api.use([
+		'fourseven:scss',
+		'jquery'
+	]);
 
 	api.addFiles([
 		'assets/javascripts/bootstrap.js'
@@ -22,7 +24,7 @@ Package.onUse(function (api) {
 		'assets/fonts/bootstrap/glyphicons-halflings-regular.woff2'
 	], 'client');
 
-	api.addAssets([
+	api.addFiles([
 		'_bootstrap.scss',
 		'assets/stylesheets/bootstrap/_alerts.scss',
 		'assets/stylesheets/bootstrap/_badges.scss',
@@ -94,12 +96,12 @@ Package.onUse(function (api) {
 		'assets/stylesheets/bootstrap/mixins/_text-emphasis.scss',
 		'assets/stylesheets/bootstrap/mixins/_text-overflow.scss',
 		'assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss'
-	], 'server');
+	], 'client', {isImport: true});
 });
 
 Package.onTest(function(api) {
 	api.use('reywood:bootstrap3-sass');
-	api.use(['fourseven:scss@3.2.0', 'tinytest', 'test-helpers']);
+	api.use(['fourseven:scss', 'tinytest', 'test-helpers']);
 
 	api.addFiles([
 		'tests.scss',
